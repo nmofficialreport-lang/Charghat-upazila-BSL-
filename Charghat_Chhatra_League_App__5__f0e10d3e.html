@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>চারঘাট উপজেলা ছাত্রলীগ ডাটা কালেকশন</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700;800&display=swap');
+        body { font-family: 'Hind Siliguri', sans-serif; background-color: #f3f4f6; }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen pb-10">
+
+    <!-- TOP HEADER / NAVIGATION -->
+    <header class="bg-green-800 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-md mx-auto px-4 py-2.5 flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+                <!-- EXACT BSL CHARGHAT EMBLEM VECTOR MATCHING NEW IMAGE -->
+                <div class="w-11 h-11 rounded-full bg-black border border-gray-400 shrink-0 overflow-hidden p-0.5 shadow-md">
+                    <svg viewBox="0 0 100 100" class="w-full h-full">
+                        <!-- Outer Black Base Circle -->
+                        <circle cx="50" cy="50" r="48" fill="#181818"/>
+                        <!-- Outer Double Concentric Border Lines -->
+                        <circle cx="50" cy="50" r="46" stroke="#ffffff" stroke-width="1.2" fill="none"/>
+                        <circle cx="50" cy="50" r="35" stroke="#ffffff" stroke-width="0.8" stroke-dasharray="1 1" fill="none"/>
+                        
+                        <!-- Left Paddy Wreath (Vertical Curved Leaf Pattern) -->
+                        <g fill="#ffffff">
+                            <path d="M 22 40 C 18 36, 18 30, 24 33 C 22 38, 20 39, 22 40 Z"/>
+                            <path d="M 20 48 C 15 45, 16 38, 22 41 C 20 46, 19 47, 20 48 Z"/>
+                            <path d="M 20 56 C 15 53, 17 46, 22 49 C 20 54, 19 55, 20 56 Z"/>
+                            <path d="M 22 64 C 18 61, 21 54, 25 57 C 23 62, 21 63, 22 64 Z"/>
+                            
+                            <!-- Right Paddy Wreath -->
+                            <path d="M 78 40 C 82 36, 82 30, 76 33 C 78 38, 80 39, 78 40 Z"/>
+                            <path d="M 80 48 C 85 45, 84 38, 78 41 C 80 46, 81 47, 80 48 Z"/>
+                            <path d="M 80 56 C 85 53, 83 46, 78 49 C 80 54, 81 55, 80 56 Z"/>
+                            <path d="M 78 64 C 82 61, 79 54, 75 57 C 77 62, 79 63, 78 64 Z"/>
+                        </g>
+
+                        <!-- Central Detailed Boat with Curved Sail, Canopy and Oar Lines -->
+                        <path d="M 26 62 C 34 74, 66 74, 74 62 C 60 66, 40 66, 26 62 Z" fill="#ffffff"/>
+                        <path d="M 42 25 L 42 62 M 42 26 C 42 26, 63 48, 63 60 C 49 60, 40 48, 42 26 Z" fill="#ffffff"/>
+                        <path d="M 40 27 L 27 60 L 41 60 Z" fill="#ffffff"/>
+                        <path d="M 44 55 Q 52 50 60 55 L 60 62 L 44 62 Z" fill="#ffffff" stroke="#181818" stroke-width="0.8"/>
+
+                        <!-- 3 Stars Curved Right Side -->
+                        <polygon points="60,29 61,32 64,32 62,34 63,37 60,35 57,37 58,34 56,32 59,32" fill="#ffffff"/>
+                        <polygon points="66,39 67,42 70,42 68,44 69,47 66,45 63,47 64,44 62,42 65,42" fill="#ffffff"/>
+                        <polygon points="70,49 71,52 74,52 72,54 73,57 70,55 67,57 68,54 66,52 69,52" fill="#ffffff"/>
+
+                        <!-- Water Waves -->
+                        <path d="M 30 67 Q 40 64 50 67 T 70 67" stroke="#ffffff" stroke-width="1" fill="none"/>
+                        <path d="M 28 70 Q 40 67 50 70 T 72 70" stroke="#ffffff" stroke-width="1" fill="none"/>
+
+                        <!-- Arc Text Top: বাংলাদেশ ছাত্রলীগ -->
+                        <path id="navTextArcTopNewExact" d="M 12 48 A 38 38 0 0 1 88 48" fill="none"/>
+                        <text font-size="7.5" fill="#ffffff" font-weight="bold"><textPath href="#navTextArcTopNewExact" startOffset="50%" text-anchor="middle">বাংলাদেশ ছাত্রলীগ</textPath></text>
+
+                        <!-- Arc Text Inner Slogan: শিক্ষা • শান্তি • প্রগতি -->
+                        <path id="navTextArcSloganExact" d="M 25 36 A 28 28 0 0 1 75 36" fill="none"/>
+                        <text font-size="5" fill="#ffffff" font-weight="600"><textPath href="#navTextArcSloganExact" startOffset="50%" text-anchor="middle">শিক্ষা • শান্তি • প্রগতি</textPath></text>
+
+                        <!-- Arc Text Bottom: চারঘাট উপজেলা শাখা -->
+                        <path id="navTextArcBottomNewExact" d="M 16 70 A 37 37 0 0 0 84 70" fill="none"/>
+                        <text font-size="7" fill="#ffffff" font-weight="bold"><textPath href="#navTextArcBottomNewExact" startOffset="50%" text-anchor="middle">চারঘাট উপজেলা শাখা</textPath></text>
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="font-bold text-base leading-tight">বাংলাদেশ ছাত্রলীগ</h1>
+                    <p class="text-[11px] text-green-200 font-medium">চারঘাট উপজেলা শাখা</p>
+                </div>
+            </div>
+            <button onclick="openAdminLogin()" class="bg-green-900 hover:bg-black text-xs py-1.5 px-3 rounded-lg flex items-center gap-1.5 transition border border-green-600">
+                <i class="fas fa-lock text-yellow-400"></i>
+                <span>এডমিন লগইন</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN BODY CONTAINER -->
+    <main class="max-w-md mx-auto p-4">
+
+        <!-- OFFICIAL BANNER HEADER WITH SLOGAN & LOGO -->
+        <div class="bg-white rounded-2xl p-4 shadow-md mb-4 border border-gray-200 relative overflow-hidden">
+            <!-- Top Slogan Header Bar -->
+            <div class="flex justify-between items-center text-[12px] sm:text-sm font-black text-black mb-3 border-b pb-1.5 px-1">
+                <span class="flex items-center gap-1">● জয় বাংলা</span>
+                <span class="text-black font-extrabold tracking-tight">✓ শিক্ষা  ✓ শান্তি  ✓ প্রগতি</span>
+                <span class="flex items-center gap-1">● জয় বঙ্গবন্ধু</span>
+            </div>
+
+            <!-- Red Banner Box with Logo & Flag Lines -->
+            <div class="flex items-center gap-2 mb-3">
+                <!-- Circular Emblem Logo Matching Image 19310 -->
+                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-black border-2 border-black shrink-0 p-0.5 shadow-md">
+                    <svg viewBox="0 0 100 100" class="w-full h-full">
+                        <circle cx="50" cy="50" r="48" fill="#181818"/>
+                        <circle cx="50" cy="50" r="46" stroke="#ffffff" stroke-width="1.2" fill="none"/>
+                        <circle cx="50" cy="50" r="35" stroke="#ffffff" stroke-width="0.8" stroke-dasharray="1 1" fill="none"/>
+                        
+                        <g fill="#ffffff">
+                            <path d="M 20 42 C 16 39, 16 32, 22 35 C 20 40, 18 41, 20 42 Z"/>
+                            <path d="M 18 50 C 13 47, 14 40, 20 43 C 18 48, 17 49, 18 50 Z"/>
+                            <path d="M 18 58 C 13 55, 15 48, 20 51 C 18 56, 17 57, 18 58 Z"/>
+                            <path d="M 20 66 C 16 63, 19 56, 23 59 C 21 64, 19 65, 20 66 Z"/>
+                            
+                            <path d="M 80 42 C 84 39, 84 32, 78 35 C 80 40, 82 41, 80 42 Z"/>
+                            <path d="M 82 50 C 87 47, 86 40, 80 43 C 82 48, 83 49, 82 50 Z"/>
+                            <path d="M 82 58 C 87 55, 85 48, 80 51 C 82 56, 83 57, 82 58 Z"/>
+                            <path d="M 80 66 C 84 63, 81 56, 77 59 C 79 64, 81 65, 80 66 Z"/>
+                        </g>
+
+                        <path d="M 26 62 C 34 74, 66 74, 74 62 C 60 66, 40 66, 26 62 Z" fill="#ffffff"/>
+                        <path d="M 42 25 L 42 62 M 42 26 C 42 26, 63 48, 63 60 C 49 60, 40 48, 42 26 Z" fill="#ffffff"/>
+                        <path d="M 40 27 L 27 60 L 41 60 Z" fill="#ffffff"/>
+                        <path d="M 44 55 Q 52 50 60 55 L 60 62 L 44 62 Z" fill="#ffffff" stroke="#181818" stroke-width="0.8"/>
+
+                        <polygon points="60,29 61,32 64,32 62,34 63,37 60,35 57,37 58,34 56,32 59,32" fill="#ffffff"/>
+                        <polygon points="66,39 67,42 70,42 68,44 69,47 66,45 63,47 64,44 62,42 65,42" fill="#ffffff"/>
+                        <polygon points="70,49 71,52 74,52 72,54 73,57 70,55 67,57 68,54 66,52 69,52" fill="#ffffff"/>
+
+                        <path d="M 30 67 Q 40 64 50 67 T 70 67" stroke="#ffffff" stroke-width="1" fill="none"/>
+                        <path d="M 28 70 Q 40 67 50 70 T 72 70" stroke="#ffffff" stroke-width="1" fill="none"/>
+
+                        <path id="bannerTextArcTopNew" d="M 12 48 A 38 38 0 0 1 88 48" fill="none"/>
+                        <text font-size="7.5" fill="#ffffff" font-weight="bold"><textPath href="#bannerTextArcTopNew" startOffset="50%" text-anchor="middle">বাংলাদেশ ছাত্রলীগ</textPath></text>
+
+                        <path id="bannerTextArcSlogan" d="M 25 36 A 28 28 0 0 1 75 36" fill="none"/>
+                        <text font-size="5" fill="#ffffff" font-weight="600"><textPath href="#bannerTextArcSlogan" startOffset="50%" text-anchor="middle">শিক্ষা • শান্তি • প্রগতি</textPath></text>
+
+                        <path id="bannerTextArcBottomNew" d="M 16 70 A 37 37 0 0 0 84 70" fill="none"/>
+                        <text font-size="7" fill="#ffffff" font-weight="bold"><textPath href="#bannerTextArcBottomNew" startOffset="50%" text-anchor="middle">চারঘাট উপজেলা শাখা</textPath></text>
+                    </svg>
+                </div>
+
+                <!-- Central Red Title Header -->
+                <div class="flex-1 bg-[#d92323] text-white py-2 px-3 flex items-center justify-center shadow-sm h-12 sm:h-14 rounded-md">
+                    <h2 class="text-xl sm:text-2xl font-black tracking-wide text-center w-full whitespace-nowrap font-sans">বাংলাদেশ ছাত্রলীগ</h2>
+                </div>
+
+                <!-- Green Side Bars/Flag Lines -->
+                <div class="flex flex-col gap-1.5 shrink-0 justify-center h-12 sm:h-14">
+                    <div class="w-6 sm:w-8 h-3.5 bg-black rounded-sm"></div>
+                    <div class="w-6 sm:w-8 h-3.5 bg-black rounded-sm"></div>
+                    <div class="w-6 sm:w-8 h-3.5 bg-black rounded-sm"></div>
+                </div>
+            </div>
+
+            <!-- Bottom Sub-title Box -->
+            <div class="border-2 border-dotted border-black rounded-sm py-1.5 text-center bg-white mx-2 sm:mx-4">
+                <p class="text-base sm:text-lg font-black text-black tracking-wide">চারঘাট উপজেলা শাখা</p>
+            </div>
+        </div>
+
+        <!-- ALERT MESSAGE BOX -->
+        <div id="alertBox" class="hidden mb-4 p-3 rounded-xl text-sm font-medium transition-all"></div>
+
+        <!-- USER DATA INPUT FORM SECTION -->
+        <div id="formSection" class="bg-white rounded-2xl shadow-md p-5 border border-gray-100">
+            <!-- TAB SELECTION -->
+            <div class="flex border-b mb-4">
+                <button id="tabLeader" type="button" onclick="switchCategory('leader')" class="flex-1 py-2 text-center font-bold text-sm text-green-700 border-b-2 border-green-700 focus:outline-none transition-all">
+                    <i class="fas fa-user-shield mr-1"></i> দায়িত্বপ্রাপ্ত কমিটি
+                </button>
+                <button id="tabWorker" type="button" onclick="switchCategory('worker')" class="flex-1 py-2 text-center font-bold text-sm text-gray-500 border-b-2 border-transparent hover:text-green-700 focus:outline-none transition-all">
+                    <i class="fas fa-user-plus mr-1"></i> সাধারণ কর্মী এন্ট্রি
+                </button>
+            </div>
+
+            <!-- 1. LEADERSHIP FORM -->
+            <form id="leaderForm" onsubmit="handleLeaderFormSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">ইউনিট নির্বাচন করুন</label>
+                    <select id="union" class="w-full p-2.5 bg-gray-50 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:outline-none text-gray-800">
+                        <option value="">-- ইউনিট নির্বাচন করুন --</option>
+                        <option value="চারঘাট উপজেলা ছাত্রলীগ">চারঘাট উপজেলা ছাত্রলীগ</option>
+                        <option value="চারঘাট পৌরসভা ছাত্রলীগ">চারঘাট পৌরসভা ছাত্রলীগ</option>
+                        <option value="ইউসুফপুর ইউনিয়ন ছাত্রলীগ">ইউসুফপুর ইউনিয়ন ছাত্রলীগ</option>
+                        <option value="শলুয়া ইউনিয়ন ছাত্রলীগ">শলুয়া ইউনিয়ন ছাত্রলীগ</option>
+                        <option value="সরদহ ইউনিয়ন ছাত্রলীগ">সরদহ ইউনিয়ন ছাত্রলীগ</option>
+                        <option value="নিমপাড়া ইউনিয়ন ছাত্রলীগ">নিমপাড়া ইউনিয়ন ছাত্রলীগ</option>
+                        <option value="চারঘাট ইউনিয়ন ছাত্রলীগ">চারঘাট ইউনিয়ন ছাত্রলীগ</option>
+                        <option value="ভায়ালক্ষ্মীপুর ইউনিয়ন ছাত্রলীগ">ভায়ালক্ষ্মীপুর ইউনিয়ন ছাত্রলীগ</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">ওয়ার্ড নির্বাচন করুন (প্রযোজ্য ক্ষেত্রে)</label>
+                    <select id="ward" class="w-full p-2.5 bg-gray-50 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:outline-none text-gray-800">
+                        <option value="">-- ওয়ার্ড নির্বাচন করুন --</option>
+                        <option value="১নং ওয়ার্ড">১নং ওয়ার্ড</option>
+                        <option value="২নং ওয়ার্ড">২নং ওয়ার্ড</option>
+                        <option value="৩নং ওয়ার্ড">৩নং ওয়ার্ড</option>
+                        <option value="৪নং ওয়ার্ড">৪নং ওয়ার্ড</option>
+                        <option value="৫নং ওয়ার্ড">৫নং ওয়ার্ড</option>
+                        <option value="৬নং ওয়ার্ড">৬নং ওয়ার্ড</option>
+                        <option value="৭নং ওয়ার্ড">৭নং ওয়ার্ড</option>
+                        <option value="৮নং ওয়ার্ড">৮নং ওয়ার্ড</option>
+                        <option value="৯নং ওয়ার্ড">৯নং ওয়ার্ড</option>
+                    </select>
+                </div>
+
+                <!-- PRESIDENT INFO -->
+                <div class="bg-green-50/50 p-3 rounded-xl border border-green-100 space-y-3">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">সভাপতির নাম</label>
+                        <input type="text" id="sovapotiName" placeholder="নাম লিখুন" class="w-full p-2.5 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">সভাপতির মোবাইল নম্বর</label>
+                        <input type="tel" id="sovapotiMobile" placeholder="017XXXXXXXX" pattern="[0-9]{11}" class="w-full p-2.5 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">সভাপতির ফেসবুক আইডি লিংক</label>
+                        <input type="url" id="sovapotiFb" placeholder="https://facebook.com/..." class="w-full p-2.5 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:outline-none">
+                    </div>
+                </div>
+
+                <!-- SECRETARY INFO -->
+                <div class="bg-blue-50/50 p-3 rounded-xl border border-blue-100 space-y-3">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">সাধারণ সম্পাদকের নাম</label>
+                        <input type="text" id="secretaryName" placeholder="নাম লিখুন" class="w-full p-2.5 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">সম্পাদকের মোবাইল নম্বর</label>
+                        <input type="tel" id="secretaryMobile" placeholder="017XXXXXXXX" pattern="[0-9]{11}" class="w-full p-2.5 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">সাধারণ সম্পাদকের ফেসবুক আইডি লিংক</label>
+                        <input type="url" id="secretaryFb" placeholder="https://facebook.com/..." class="w-full p-2.5 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                    </div>
+                </div>
+
+                <!-- OTHER DESIGNATIONS & LEADERS -->
+                <div class="bg-amber-50/50 p-3 rounded-xl border border-amber-100 space-y-3">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">কমিটিতে অন্যান্য পদের নাম নির্বাচন করুন</label>
+                        <select id="otherDesignationSelect" onchange="toggleCustomDesignationInput()" class="w-full p-2.5 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:outline-none text-gray-800">
+                            <option value="">-- পদ নির্বাচন করুন --</option>
+                            <option value="সহ-সভাপতি">সহ-সভাপতি</option>
+                            <option value="যুগ্ম সাধারণ সম্পাদক">যুগ্ম সাধারণ সম্পাদক</option>
+                            <option value="সাংগঠনিক সম্পাদক">সাংগঠনিক সম্পাদক</option>
+                            <option value="প্রচার সম্পাদক">প্রচার সম্পাদক</option>
+                            <option value="দপ্তর সম্পাদক">দপ্তর সম্পাদক</option>
+                            <option value="অর্থ সম্পাদক">অর্থ সম্পাদক</option>
+                            <option value="শিক্ষা ও পাঠচক্র সম্পাদক">শিক্ষা ও পাঠচক্র সম্পাদক</option>
+                            <option value="ক্রীড়া সম্পাদক">ক্রীড়া সম্পাদক</option>
+                            <option value="ত্রাণ ও দুর্যোগ ব্যবস্থাপনা সম্পাদক">ত্রাণ ও দুর্যোগ ব্যবস্থাপনা সম্পাদক</option>
+                            <option value="কার্যকারী সদস্য">কার্যকারী সদস্য</option>
+                            <option value="custom">+ অন্যান্য/নতুন পদ লিখুন</option>
+                        </select>
+                    </div>
+
+                    <div id="customDesignationBox" class="hidden">
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">নতুন পদের নাম লিখুন</label>
+                        <input type="text" id="otherDesignationCustom" placeholder="যেমন: সহ-সম্পাদক, সদস্য ইত্যাদি" class="w-full p-2.5 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">উক্ত পদের নেতার নাম</label>
+                        <input type="text" id="otherName" placeholder="নাম লিখুন" class="w-full p-2.5 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">উক্ত পদের নেতার মোবাইল নম্বর</label>
+                        <input type="tel" id="otherMobile" placeholder="017XXXXXXXX" pattern="[0-9]{11}" class="w-full p-2.5 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">উক্ত পদের নেতার ফেসবুক আইডি লিংক</label>
+                        <input type="url" id="otherFb" placeholder="https://facebook.com/..." class="w-full p-2.5 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full bg-green-700 hover:bg-green-800 text-white font-bold py-3 px-4 rounded-xl shadow-md transition duration-200 flex items-center justify-center gap-2 mt-2">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>কমিটি ডাটা জমা দিন</span>
+                </button>
+            </form>
+
+            <!-- 2. WORKER FORM -->
+            <form id="workerForm" onsubmit="handleWorkerFormSubmit(event)" class="space-y-4 hidden">
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">ইউনিট নির্বাচন করুন</label>
+                    <select id="wUnion" class="w-full p-2.5 bg-gray-50 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:outline-none text-gray-800">
+                        <option value="">-- ইউনিট নির্বাচন করুন --</option>
+                        <option value="চারঘাট উপজেলা ছাত্রলীগ">চারঘাট উপজেলা ছাত্রলীগ</option>
+                        <option value="চারঘাট পৌরসভা ছাত্রলীগ">চারঘাট পৌরসভা ছাত্রলীগ</option>
+                        <option value="ইউসুফপুর ইউনিয়ন ছাত্রলীগ">ইউসুফপুর ইউনিয়ন ছাত্রলীগ</option>
+                        <option value="শলুয়া ইউনিয়ন ছাত্রলীগ">শলুয়া ইউনিয়ন ছাত্রলীগ</option>
+                        <option value="সরদহ ইউনিয়ন ছাত্রলীগ">সরদহ ইউনিয়ন ছাত্রলীগ</option>
+                        <option value="নিমপাড়া ইউনিয়ন ছাত্রলীগ">নিমপাড়া ইউনিয়ন ছাত্রলীগ</option>
+                        <option value="চারঘাট ইউনিয়ন ছাত্রলীগ">চারঘাট ইউনিয়ন ছাত্রলীগ</option>
+                        <option value="ভায়ালক্ষ্মীপুর ইউনিয়ন ছাত্রলীগ">ভায়ালক্ষ্মীপুর ইউনিয়ন ছাত্রলীগ</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">ওয়ার্ড নির্বাচন করুন</label>
+                    <select id="wWard" class="w-full p-2.5 bg-gray-50 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:outline-none text-gray-800">
+                        <option value="">-- ওয়ার্ড নির্বাচন করুন --</option>
+                        <option value="১নং ওয়ার্ড">১নং ওয়ার্ড</option>
+                        <option value="২নং ওয়ার্ড">২নং ওয়ার্ড</option>
+                        <option value="৩নং ওয়ার্ড">৩নং ওয়ার্ড</option>
+                        <option value="৪নং ওয়ার্ড">৪নং ওয়ার্ড</option>
+                        <option value="৫নং ওয়ার্ড">৫নং ওয়ার্ড</option>
+                        <option value="৬নং ওয়ার্ড">৬নং ওয়ার্ড</option>
+                        <option value="৭নং ওয়ার্ড">৭নং ওয়ার্ড</option>
+                        <option value="৮নং ওয়ার্ড">৮নং ওয়ার্ড</option>
+                        <option value="৯নং ওয়ার্ড">৯নং ওয়ার্ড</option>
+                    </select>
+                </div>
+
+                <div class="bg-purple-50/50 p-3 rounded-xl border border-purple-100 space-y-3">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">কর্মীর পূর্ণ নাম</label>
+                        <input type="text" id="wName" placeholder="কর্মীর নাম লিখুন" class="w-full p-2.5 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">পদবী (না থাকলে সদস্য লিখুন)</label>
+                        <input type="text" id="wDesignation" placeholder="যেমন: সদস্য, সহ-সভাপতি ইত্যাদি" class="w-full p-2.5 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">মোবাইল নম্বর</label>
+                        <input type="tel" id="wMobile" placeholder="017XXXXXXXX" pattern="[0-9]{11}" class="w-full p-2.5 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">ফেসবুক আইডি লিংক</label>
+                        <input type="url" id="wFb" placeholder="https://facebook.com/..." class="w-full p-2.5 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:outline-none">
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full bg-purple-700 hover:bg-purple-800 text-white font-bold py-3 px-4 rounded-xl shadow-md transition duration-200 flex items-center justify-center gap-2 mt-2">
+                    <i class="fas fa-user-check"></i>
+                    <span>কর্মী ডাটা জমা দিন</span>
+                </button>
+            </form>
+        </div>
+
+        <!-- ADMIN LIST DISPLAY SECTION (PASSWORD PROTECTED) -->
+        <div id="listSection" class="hidden bg-white rounded-2xl shadow-md p-5 border border-gray-100">
+            <div class="flex justify-between items-center mb-4 pb-2 border-b">
+                <div>
+                    <h2 class="text-lg font-bold text-gray-800 flex items-center gap-2">
+                        <i class="fas fa-database text-green-600"></i> সংরক্ষিত তথ্য (এডমিন প্যানেল)
+                    </h2>
+                    <p class="text-xs text-gray-500">মোট ডাটা: <span id="dataCount" class="font-bold text-green-700">0</span> টি</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button onclick="toggleGoogleSheetSettings()" class="text-xs bg-blue-50 hover:bg-blue-100 text-blue-700 font-semibold px-2.5 py-1.5 rounded-lg border border-blue-200" title="গুগল শিট লিংক করুন">
+                        <i class="fas fa-table mr-1"></i> গুগল শিট
+                    </button>
+                    <button onclick="logoutAdmin()" class="text-xs bg-red-100 hover:bg-red-200 text-red-700 font-semibold px-2.5 py-1.5 rounded-lg border border-red-200">
+                        <i class="fas fa-sign-out-alt"></i> লগআউট
+                    </button>
+                </div>
+            </div>
+
+            <!-- GOOGLE SHEET CONFIGURATION SETTINGS PANEL -->
+            <div id="googleSheetConfigPanel" class="hidden mb-4 p-3 bg-blue-50/70 border border-blue-200 rounded-xl space-y-2">
+                <div class="flex justify-between items-center">
+                    <label class="text-xs font-bold text-blue-900 flex items-center gap-1">
+                        <i class="fas fa-link"></i> Google Web App Webhook URL:
+                    </label>
+                    <span class="text-[10px] bg-blue-200 text-blue-800 px-1.5 py-0.5 rounded font-mono">Google Apps Script</span>
+                </div>
+                <input type="text" id="googleSheetUrlInput" placeholder="https://script.google.com/macros/s/.../exec" class="w-full p-2 text-xs bg-white border border-blue-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500 font-mono">
+                <div class="flex justify-between items-center gap-2 pt-1">
+                    <p class="text-[11px] text-gray-500">ডাটা সাবমিট হলে স্বয়ংক্রিয়ভাবে গুগল শিটে জমা হবে।</p>
+                    <button onclick="saveGoogleSheetUrl()" class="bg-blue-600 hover:bg-blue-700 text-white text-xs px-3 py-1 rounded-lg font-semibold shadow-sm">
+                        সেভ করুন
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex gap-2 mb-3">
+                <button onclick="filterType('all')" id="filterAll" class="flex-1 py-1 text-xs font-semibold rounded-lg bg-green-700 text-white">সব দেখাও</button>
+                <button onclick="filterType('leader')" id="filterLeader" class="flex-1 py-1 text-xs font-semibold rounded-lg bg-gray-100 text-gray-600">কমিটি</button>
+                <button onclick="filterType('worker')" id="filterWorker" class="flex-1 py-1 text-xs font-semibold rounded-lg bg-gray-100 text-gray-600">সাধারণ কর্মী</button>
+            </div>
+
+            <input type="text" id="searchInput" onkeyup="filterRecords()" placeholder="ইউনিয়ন, ওয়ার্ড বা নাম দিয়ে খুঁজুন..." class="w-full p-2 mb-3 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-green-500">
+
+            <div id="recordsContainer" class="space-y-3 max-h-[60vh] overflow-y-auto"></div>
+        </div>
+    </main>
+
+    <!-- ADMIN LOGIN MODAL -->
+    <div id="loginModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-2xl shadow-xl p-5 w-full max-w-xs border border-gray-200 text-center space-y-4">
+            <div class="w-12 h-12 bg-green-100 text-green-700 rounded-full flex items-center justify-center mx-auto text-xl">
+                <i class="fas fa-user-shield"></i>
+            </div>
+            <div>
+                <h3 class="font-bold text-gray-800 text-base">এডমিন সিকিউরিটি যাচাই</h3>
+                <p class="text-xs text-gray-500 mt-1">তথ্য দেখার জন্য পাসওয়ার্ড দিন</p>
+            </div>
+            <form onsubmit="handleAdminLogin(event)" class="space-y-3">
+                <input type="password" id="adminPassInput" required placeholder="পাসওয়ার্ড লিখুন" class="w-full p-2.5 bg-gray-50 border border-gray-300 rounded-xl text-center font-bold tracking-widest focus:ring-2 focus:ring-green-500 focus:outline-none">
+                <div class="flex gap-2">
+                    <button type="button" onclick="closeAdminModal()" class="flex-1 bg-gray-100 text-gray-700 font-semibold py-2 rounded-xl text-sm hover:bg-gray-200">বাতিল</button>
+                    <button type="submit" class="flex-1 bg-green-700 text-white font-semibold py-2 rounded-xl text-sm hover:bg-green-800">লগইন</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT APP LOGIC -->
+    <script>
+        let localDataStore = [];
+        let currentTypeFilter = 'all';
+        let isAdminLoggedIn = false;
+        let adminPassword = '1402'; // Updated Password
+        let googleSheetUrl = '';
+
+        // Load data from LocalStorage on page load so data is never lost
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedData = localStorage.getItem('bsl_charghat_data');
+            if (savedData) {
+                try {
+                    localDataStore = JSON.parse(savedData);
+                } catch (e) {
+                    localDataStore = [];
+                }
+            }
+            googleSheetUrl = localStorage.getItem('bsl_google_sheet_url') || '';
+            const sheetInput = document.getElementById('googleSheetUrlInput');
+            if (sheetInput && googleSheetUrl) {
+                sheetInput.value = googleSheetUrl;
+            }
+            document.getElementById('dataCount').innerText = localDataStore.length;
+        });
+
+        // Function to safely save current store to LocalStorage
+        function saveDataToStorage() {
+            localStorage.setItem('bsl_charghat_data', JSON.stringify(localDataStore));
+            document.getElementById('dataCount').innerText = localDataStore.length;
+        }
+
+        function toggleGoogleSheetSettings() {
+            const panel = document.getElementById('googleSheetConfigPanel');
+            panel.classList.toggle('hidden');
+        }
+
+        function saveGoogleSheetUrl() {
+            const url = document.getElementById('googleSheetUrlInput').value.trim();
+            googleSheetUrl = url;
+            localStorage.setItem('bsl_google_sheet_url', url);
+            showAlert('গুগল শিট URL সেভ করা হয়েছে!');
+            document.getElementById('googleSheetConfigPanel').classList.add('hidden');
+        }
+
+        // Send payload to Google Sheets script if configured
+        function sendToGoogleSheet(payload) {
+            if (!googleSheetUrl) return;
+            fetch(googleSheetUrl, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            }).catch(err => console.log('Google Sheet Error:', err));
+        }
+
+        // Delete record function for admin
+        function deleteRecord(id) {
+            if (!isAdminLoggedIn) return;
+            const confirmDelete = confirm('আপনি কি নিশ্চিত যে এই ডাটাটি মুছে ফেলতে চান?');
+            if (confirmDelete) {
+                localDataStore = localDataStore.filter(item => item.id !== id);
+                saveDataToStorage();
+                renderRecords();
+                showAlert('তথ্যটি সফলভাবে মুছে ফেলা হয়েছে!', 'danger');
+            }
+        }
+
+        function toggleCustomDesignationInput() {
+            const selectVal = document.getElementById('otherDesignationSelect').value;
+            const customBox = document.getElementById('customDesignationBox');
+            if (selectVal === 'custom') {
+                customBox.classList.remove('hidden');
+                document.getElementById('otherDesignationCustom').focus();
+            } else {
+                customBox.classList.add('hidden');
+                document.getElementById('otherDesignationCustom').value = '';
+            }
+        }
+
+        function switchCategory(type) {
+            const tabLeader = document.getElementById('tabLeader');
+            const tabWorker = document.getElementById('tabWorker');
+            const leaderForm = document.getElementById('leaderForm');
+            const workerForm = document.getElementById('workerForm');
+
+            if (type === 'leader') {
+                tabLeader.className = "flex-1 py-2 text-center font-bold text-sm text-green-700 border-b-2 border-green-700 focus:outline-none transition-all";
+                tabWorker.className = "flex-1 py-2 text-center font-bold text-sm text-gray-500 border-b-2 border-transparent hover:text-green-700 focus:outline-none transition-all";
+                leaderForm.classList.remove('hidden');
+                workerForm.classList.add('hidden');
+            } else {
+                tabWorker.className = "flex-1 py-2 text-center font-bold text-sm text-purple-700 border-b-2 border-purple-700 focus:outline-none transition-all";
+                tabLeader.className = "flex-1 py-2 text-center font-bold text-sm text-gray-500 border-b-2 border-transparent hover:text-purple-700 focus:outline-none transition-all";
+                workerForm.classList.remove('hidden');
+                leaderForm.classList.add('hidden');
+            }
+        }
+
+        function openAdminLogin() {
+            if (isAdminLoggedIn) {
+                toggleView('list');
+            } else {
+                document.getElementById('loginModal').classList.remove('hidden');
+                document.getElementById('adminPassInput').value = '';
+                document.getElementById('adminPassInput').focus();
+            }
+        }
+
+        function closeAdminModal() {
+            document.getElementById('loginModal').classList.add('hidden');
+        }
+
+        function handleAdminLogin(e) {
+            e.preventDefault();
+            const pass = document.getElementById('adminPassInput').value;
+            if (pass === adminPassword) {
+                isAdminLoggedIn = true;
+                closeAdminModal();
+                showAlert('এডমিন হিসেবে সফলভাবে লগইন করেছেন!');
+                toggleView('list');
+            } else {
+                alert('ভুল পাসওয়ার্ড! আবার চেষ্টা করুন।');
+            }
+        }
+
+        function logoutAdmin() {
+            isAdminLoggedIn = false;
+            toggleView('form');
+            showAlert('আপনি এডমিন প্যানেল থেকে লগআউট হয়েছেন।');
+        }
+
+        function toggleView(view) {
+            const formSec = document.getElementById('formSection');
+            const listSec = document.getElementById('listSection');
+            
+            if (view === 'list') {
+                if (!isAdminLoggedIn) {
+                    openAdminLogin();
+                    return;
+                }
+                formSec.classList.add('hidden');
+                listSec.classList.remove('hidden');
+                renderRecords();
+            } else {
+                listSec.classList.add('hidden');
+                formSec.classList.remove('hidden');
+            }
+        }
+
+        function showAlert(msg, type = 'success') {
+            const alertBox = document.getElementById('alertBox');
+            alertBox.classList.remove('hidden', 'bg-red-100', 'text-red-700', 'bg-green-100', 'text-green-700');
+            
+            if (type === 'success') {
+                alertBox.classList.add('bg-green-100', 'text-green-700');
+            } else {
+                alertBox.classList.add('bg-red-100', 'text-red-700');
+            }
+            alertBox.innerText = msg;
+
+            setTimeout(() => {
+                alertBox.classList.add('hidden');
+            }, 3000);
+        }
+
+        function handleLeaderFormSubmit(e) {
+            e.preventDefault();
+
+            const selectDesignation = document.getElementById('otherDesignationSelect').value;
+            const customDesignation = document.getElementById('otherDesignationCustom').value.trim();
+            let finalDesignation = 'উল্লেখ নেই';
+            
+            if (selectDesignation === 'custom') {
+                finalDesignation = customDesignation !== '' ? customDesignation : 'অন্যান্য পদ';
+            } else if (selectDesignation !== '') {
+                finalDesignation = selectDesignation;
+            }
+
+            const entry = {
+                id: Date.now(),
+                type: 'leader',
+                union: document.getElementById('union').value || 'উল্লেখ নেই',
+                ward: document.getElementById('ward').value || 'উল্লেখ নেই',
+                sovapotiName: document.getElementById('sovapotiName').value || 'উল্লেখ নেই',
+                sovapotiMobile: document.getElementById('sovapotiMobile').value || 'উল্লেখ নেই',
+                sovapotiFb: document.getElementById('sovapotiFb').value,
+                secretaryName: document.getElementById('secretaryName').value || 'উল্লেখ নেই',
+                secretaryMobile: document.getElementById('secretaryMobile').value || 'উল্লেখ নেই',
+                secretaryFb: document.getElementById('secretaryFb').value,
+                otherDesignation: finalDesignation,
+                otherName: document.getElementById('otherName').value || 'উল্লেখ নেই',
+                otherMobile: document.getElementById('otherMobile').value || 'উল্লেখ নেই',
+                otherFb: document.getElementById('otherFb').value,
+                createdAt: new Date().toLocaleDateString('bn-BD')
+            };
+
+            localDataStore.unshift(entry);
+            saveDataToStorage();
+            sendToGoogleSheet(entry);
+
+            showAlert('আপনার তথ্য সফলভাবে জমা নেওয়া হয়েছে!');
+            document.getElementById('leaderForm').reset();
+            toggleCustomDesignationInput();
+        }
+
+        function handleWorkerFormSubmit(e) {
+            e.preventDefault();
+
+            const customName = document.getElementById('wName').value.trim();
+            const nameValue = customName !== '' ? customName : 'নাম প্রকাশে অনিচ্ছুক';
+
+            const customDesignation = document.getElementById('wDesignation').value.trim();
+            const designationValue = customDesignation !== '' ? customDesignation : 'সদস্য';
+
+            const entry = {
+                id: Date.now(),
+                type: 'worker',
+                union: document.getElementById('wUnion').value || 'উল্লেখ নেই',
+                ward: document.getElementById('wWard').value || 'উল্লেখ নেই',
+                name: nameValue,
+                designation: designationValue,
+                mobile: document.getElementById('wMobile').value || 'উল্লেখ নেই',
+                fb: document.getElementById('wFb').value,
+                createdAt: new Date().toLocaleDateString('bn-BD')
+            };
+
+            localDataStore.unshift(entry);
+            saveDataToStorage();
+            sendToGoogleSheet(entry);
+
+            showAlert('আপনার তথ্য সফলভাবে জমা নেওয়া হয়েছে!');
+            document.getElementById('workerForm').reset();
+        }
+
+        function filterType(type) {
+            currentTypeFilter = type;
+            const btnAll = document.getElementById('filterAll');
+            const btnLeader = document.getElementById('filterLeader');
+            const btnWorker = document.getElementById('filterWorker');
+
+            btnAll.className = type === 'all' ? "flex-1 py-1 text-xs font-semibold rounded-lg bg-green-700 text-white" : "flex-1 py-1 text-xs font-semibold rounded-lg bg-gray-100 text-gray-600";
+            btnLeader.className = type === 'leader' ? "flex-1 py-1 text-xs font-semibold rounded-lg bg-green-700 text-white" : "flex-1 py-1 text-xs font-semibold rounded-lg bg-gray-100 text-gray-600";
+            btnWorker.className = type === 'worker' ? "flex-1 py-1 text-xs font-semibold rounded-lg bg-purple-700 text-white" : "flex-1 py-1 text-xs font-semibold rounded-lg bg-gray-100 text-gray-600";
+
+            filterRecords();
+        }
+
+        function renderRecords(recordsToRender = localDataStore) {
+            const container = document.getElementById('recordsContainer');
+            container.innerHTML = '';
+
+            let filtered = recordsToRender;
+            if (currentTypeFilter !== 'all') {
+                filtered = filtered.filter(item => item.type === currentTypeFilter);
+            }
+
+            if (filtered.length === 0) {
+                container.innerHTML = `<div class="text-center py-8 text-gray-400">কোনো তথ্য সংরক্ষিত নেই</div>`;
+                return;
+            }
+
+            filtered.forEach(item => {
+                const card = document.createElement('div');
+                card.className = "p-3 border border-gray-200 rounded-xl bg-gray-50 text-sm space-y-1.5 shadow-sm relative";
+                
+                if (item.type === 'leader') {
+                    const sovapotiFbHtml = item.sovapotiFb ? `<a href="${item.sovapotiFb}" target="_blank" class="text-blue-600 hover:underline text-xs ml-1"><i class="fab fa-facebook"></i> প্রোফাইল</a>` : '';
+                    const secretaryFbHtml = item.secretaryFb ? `<a href="${item.secretaryFb}" target="_blank" class="text-blue-600 hover:underline text-xs ml-1"><i class="fab fa-facebook"></i> প্রোফাইল</a>` : '';
+                    const otherFbHtml = item.otherFb ? `<a href="${item.otherFb}" target="_blank" class="text-blue-600 hover:underline text-xs ml-1"><i class="fab fa-facebook"></i> প্রোফাইল</a>` : '';
+
+                    card.innerHTML = `
+                        <div class="flex justify-between items-center border-b pb-1">
+                            <span class="font-bold text-green-700">${item.union} (${item.ward})</span>
+                            <div class="flex items-center gap-1.5">
+                                <span class="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded-full font-semibold">কমিটি</span>
+                                <button onclick="deleteRecord(${item.id})" class="text-red-500 hover:text-red-700 text-xs p-1" title="মুছে ফেলুন"><i class="fas fa-trash-alt"></i></button>
+                            </div>
+                        </div>
+                        <div class="text-gray-700"><strong>সভাপতি:</strong> ${item.sovapotiName} (${item.sovapotiMobile}) ${sovapotiFbHtml}</div>
+                        <div class="text-gray-700"><strong>সম্পাদক:</strong> ${item.secretaryName} (${item.secretaryMobile}) ${secretaryFbHtml}</div>
+                        <div class="text-gray-700 border-t pt-1 mt-1"><strong>${item.otherDesignation}:</strong> ${item.otherName} (${item.otherMobile}) ${otherFbHtml}</div>
+                        <div class="text-xs text-gray-500"><strong>তারিখ:</strong> ${item.createdAt}</div>
+                    `;
+                } else {
+                    const workerFbHtml = item.fb ? `<a href="${item.fb}" target="_blank" class="text-blue-600 hover:underline text-xs ml-1"><i class="fab fa-facebook"></i> প্রোফাইল</a>` : '';
+
+                    card.innerHTML = `
+                        <div class="flex justify-between items-center border-b pb-1">
+                            <span class="font-bold text-purple-700">${item.name} (${item.designation})</span>
+                            <div class="flex items-center gap-1.5">
+                                <span class="text-xs bg-purple-100 text-purple-800 px-2 py-0.5 rounded-full font-semibold">সাধারণ কর্মী</span>
+                                <button onclick="deleteRecord(${item.id})" class="text-red-500 hover:text-red-700 text-xs p-1" title="মুছে ফেলুন"><i class="fas fa-trash-alt"></i></button>
+                            </div>
+                        </div>
+                        <div class="text-gray-700"><strong>ঠিকানা:</strong> ${item.union}, ${item.ward}</div>
+                        <div class="text-gray-700"><strong>মোবাইল:</strong> ${item.mobile} ${workerFbHtml}</div>
+                        <div class="text-xs text-gray-500"><strong>তারিখ:</strong> ${item.createdAt}</div>
+                    `;
+                }
+
+                container.appendChild(card);
+            });
+        }
+
+        function filterRecords() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = localDataStore.filter(item => {
+                if (item.type === 'leader') {
+                    return item.union.toLowerCase().includes(query) ||
+                           item.ward.toLowerCase().includes(query) ||
+                           item.sovapotiName.toLowerCase().includes(query) ||
+                           item.secretaryName.toLowerCase().includes(query);
+                } else {
+                    return item.union.toLowerCase().includes(query) ||
+                           item.ward.toLowerCase().includes(query) ||
+                           item.name.toLowerCase().includes(query) ||
+                           item.designation.toLowerCase().includes(query) ||
+                           item.mobile.toLowerCase().includes(query);
+                }
+            });
+            renderRecords(filtered);
+        }
+    </script>
+</body>
+</html>
